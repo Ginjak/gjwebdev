@@ -235,19 +235,32 @@
 }
 
 .contact-info {
+  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.contact-info > div:first-child a:first-child {
+  margin-right: 10px;
+}
+.contact-info > div:first-child {
+  margin-bottom: 10px;
 }
 
 .contact-info i {
   position: relative;
   top: 0px;
-  padding: 0 10px;
+  padding-right: 10px;
   font-size: 18px;
   color: var(--background-color);
   transition: top var(--transition) ease-in;
 }
-.contact-info a:hover i {
+.contact-info a {
+  color: var(--background-color);
+}
+.contact-info div:last-child a:hover i {
   top: -5px;
   transition: top var(--transition) ease-in;
 }
@@ -333,6 +346,14 @@
       "projectFour projectFive";
     gap: 10px;
     margin-left: 10px;
+  }
+  .contact-info {
+    margin-left: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contact-info div:first-child {
+    margin-bottom: 0;
   }
 }
 
